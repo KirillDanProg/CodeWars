@@ -13,8 +13,6 @@ function moveZeros(arr) {
 }
 // Moving Zeros To The End
 
-
-
 // 6 KUY Does my number look big in this?
 function narcissistic(value) {
   let res = 0;
@@ -36,8 +34,6 @@ function mult(x, n) {
 }
 // 6 KUY Does my number look big in this?
 
-
-
 //Reduce My Fraction
 function reduce(fraction) {
   let [one, two] = fraction;
@@ -52,12 +48,27 @@ function reduce(fraction) {
 }
 // Reduce My Fraction
 
-
+//Remove the minimum
 function removeSmallest(numbers) {
-    let copy = [...numbers]
-    let copy2 = [...numbers]
-    let minNum = copy.sort((a, b) => a - b).reverse().pop()
-    let indexMin = numbers.indexOf(minNum)
-    copy2.splice(indexMin, 1)
-    return copy2
-    }
+  let copy = [...numbers];
+  let copy2 = [...numbers];
+  let minNum = copy
+    .sort((a, b) => a - b)
+    .reverse()
+    .pop();
+  let indexMin = numbers.indexOf(minNum);
+  copy2.splice(indexMin, 1);
+  return copy2;
+}
+//Remove the minimum
+
+function isPangram(string){
+  let str = string.toLowerCase().replace(/\s/g, '').replace(/[0-9]/g, "")
+  console.log(str)
+  let set = new Set(str)
+  if(set.size < 26) {
+    return false
+  } else {
+    return true
+  }
+}
