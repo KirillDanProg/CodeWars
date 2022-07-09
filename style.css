@@ -1,0 +1,10 @@
+body {
+    background-color:#c9c9c9;
+}
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
