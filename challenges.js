@@ -62,6 +62,7 @@ function removeSmallest(numbers) {
 }
 //Remove the minimum
 
+//6 KUY Detect Pangram
 function isPangram(string){
   let str = string.toLowerCase().replace(/\s/g, '').replace(/[0-9]/g, "")
   console.log(str)
@@ -71,4 +72,26 @@ function isPangram(string){
   } else {
     return true
   }
+}
+//Detect Pangram
+
+function compareVersions (v1, v2) {
+  v1 = v1.split(".").map(elem => +elem)
+  v2 = v2.split(".").map(elem => +elem)
+  let max = Math.max(v1.length, v2.length)
+  let i = 0;
+  while(!(v1[i] < v2[i])) {
+    if(v1[i] > v2[i]) {
+    return true
+    }
+    if(v1[i] === undefined) {
+      v1[i] = 0
+      if(v1[i] < v2[i]) {
+        return false
+      }
+      return true
+    } 
+    i++
+  }
+  return false
 }
